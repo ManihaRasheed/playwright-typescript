@@ -10,7 +10,7 @@ test('POM Register and Login', async ({ page }) => {
 // Navigate to the registration page and perform registration
     await registerPage.navigateToRegister();
     await page.screenshot({ path: 'ss/registerpage.png' }); 
-    await registerPage.fillRegistrationForm("Mani", "Rasheed", "mani2220rash@mail.com", "03085369444", "1234mani");
+    await registerPage.fillRegistrationForm("Mani", "Rasheed", "mani20220rash@mail.com", "03085369444", "1234mani");
     await registerPage.submitRegistration();
 
     const registerTitle = await registerPage.getPageTitle();
@@ -25,7 +25,7 @@ test('POM Register and Login', async ({ page }) => {
     await page.goto('https://naveenautomationlabs.com/opencart/index.php?route=account/logout');
     await loginPage.navigateToLogin();
     await page.screenshot({ path: 'ss/loginpage.png' }); 
-    await loginPage.login("mani2220rash@mail.com", "1234mani");
+    await loginPage.login("mani20220rash@mail.com", "1234mani");
 
     const loginTitle = await loginPage.getPageTitle();
     console.log("Home page title after login", loginTitle);
